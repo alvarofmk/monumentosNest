@@ -4,7 +4,7 @@ import { UpdateMonumentoDto } from "./update-monumento.dto";
 
 export class DtoMapper{
 
-    updateToMonumento(updateMonumentoDto: UpdateMonumentoDto){
+    updateToMonumento(updateMonumentoDto: UpdateMonumentoDto): Monumento{
         let resultado: Monumento;
         resultado.city = updateMonumentoDto.city;
         resultado.code = updateMonumentoDto.code;
@@ -16,7 +16,7 @@ export class DtoMapper{
         return resultado;
     }
 
-    createToMonumento(createMonumentoDto: CreateMonumentoDto){
+    createToMonumento(createMonumentoDto: CreateMonumentoDto): Monumento{
         let resultado: Monumento;
         resultado.city = createMonumentoDto.city;
         resultado.code = createMonumentoDto.code;
