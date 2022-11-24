@@ -1,9 +1,7 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, OnApplicationBootstrap } from '@nestjs/common';
 import { MonumentoService } from './monumento.service';
-import { CreateMonumentoDto } from './dto/create-monumento.dto';
-import { UpdateMonumentoDto } from './dto/update-monumento.dto';
 import { Monumento } from './entities/monumento.entity';
-import { CreateManyDto, Crud, CrudController, CrudRequest, CrudService, GetManyDefaultResponse } from '@nestjsx/crud';
+import { CreateManyDto, Crud, CrudController, CrudRequest, CrudRequestInterceptor, CrudService, GetManyDefaultResponse } from '@nestjsx/crud';
 
 @Crud({
   model: {
